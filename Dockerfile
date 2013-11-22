@@ -29,10 +29,10 @@ RUN     yum install -y npm
 ADD ./nodejs_app /nodejs_app
 
 # cd into the app dir
-RUN cd /nodejs_app
+RUN cd /nodejs_app; npm install
 
 # Install the node app
-# RUN npm install
+# RUN npm update
 
 # The app runs on port 1234 by default, expose it
 EXPOSE 1234
