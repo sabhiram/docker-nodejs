@@ -29,7 +29,7 @@ RUN     yum install -y npm
 ADD ./nodejs_app /nodejs_app
 
 # cd into the app dir
-RUN cd /nodejs_app; npm install
+RUN cd /nodejs_app; npm update
 
 # Install the node app
 # RUN npm update
