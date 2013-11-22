@@ -15,6 +15,15 @@ Assuming that you are in a folder you wish to pull the repo (and copy your node 
 ```
 # git init
 # git pull https://github.com/sabhiram/docker-nodejs.git
+```
+
+There is a default folder called *nodejs_app* which contains index.js and package.json files. 
+To have this actually use your own app, copy or git pull your app into the *nodejs_app* dir. The
+Vagrant file exposes the current dir to the VM, and then docker also keeps said folder sync'd with
+the node container it will spawn. This allows us to edit the server in our VM host and re-deploy
+with ease.
+
+```
 # vagrant up
 # vagrant ssh 
 ```
